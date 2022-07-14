@@ -13,7 +13,7 @@ public class DadosPessoaisComPessoaService {
     private PessoaService pessoaService;
 
     public boolean verificaPessoasIguais(String cpf){
-        return pessoaService.listar().stream().anyMatch(p -> p.getCpf().equals(dadosPessoaisClientService.buscaPorCPF(p.getCpf()).getCpf()));
+        return pessoaService.listar().stream().anyMatch(p -> p.getCpf().equals(dadosPessoaisClientService.buscaPorCPF(cpf).getCpf()));
     }
 
 
